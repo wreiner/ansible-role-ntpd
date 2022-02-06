@@ -1,0 +1,6 @@
+---
+- name: "Restart ntp daemon"
+  service:
+    name: "ntp"
+    daemon-reload: "yes"
+    state: "restarted"

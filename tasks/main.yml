@@ -1,0 +1,8 @@
+---
+- name: "Install ntpd"
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - ntp
+  notify: "Restart ntp daemon"
